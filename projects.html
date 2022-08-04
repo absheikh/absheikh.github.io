@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Hi I'm Aminu Babayo Shehu. I am a full stack web developer with a passion for creating beautiful
+          and user-friendly websites."
+    />
+    <meta
+      name="keywords"
+      content="fullstack developer, frontend developer, software engineer, HTML, CSS, JavaScript, react js, react native, PHP, MySQL, MongoDB"
+    />
+    <meta name="author" content="Aminu Babayo Shehu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Aminu Babayo Shehu - Porfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="skills-page">
+    <nav class="nav-container wrapper">
+      <a href="#" class="nav-logo"><span>abs</span>heikh</a>
+      <div class="toggle"></div>
+
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="skills.html" class="nav-link">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="experience.html" class="nav-link">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" id="contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- //Modal -->
+    <div class="modal-container">
+      <div class="modal-body">
+        <div class="close-modal">X</div>
+        <h4 class="modal-title">Contact Me</h4>
+        <p class="modal-description">
+          Want to hire me for a project? Then feel free to react out to me:
+        </p>
+        <p class="modal-list">Email: absheikhone@gmai.com</p>
+        <p class="modal-list">Phone: +2349074748664</p>
+        <p class="modal-list">Facebook/ABSheikhone</p>
+      </div>
+    </div>
+    <!-- Project -->
+    <div class="projects-container wrapper">
+      <div class="project-content slider1">
+        <div class="description-container">
+          <h6 class="title">School Management System</h6>
+          <p class="description">
+            Developed school management for Islamic Orientation Nursery, Primary
+            & Secondary School, Azare.
+          </p>
+          <a href="https://iosazare.com" class="check-project">Check</a>
+        </div>
+        <img
+          src="assets/img/project-1.jpg"
+          alt="project-1"
+          class="project-img"
+        />
+      </div>
+      <div class="project-content slider2">
+        <div class="description-container">
+          <h6 class="title">Landing Page Website</h6>
+          <p class="description">
+            Developed a landing page for a Zenith Token. A crypto-currency
+            website that deals with selling tokens.
+          </p>
+          <a href="https://zenithtoken.org" class="check-project">Check</a>
+        </div>
+        <img
+          src="assets/img/project-2.png"
+          alt="project-2"
+          class="project-img"
+        />
+      </div>
+
+      <div class="project-content slider3">
+        <div class="description-container">
+          <h6 class="title">E-Wallet Website</h6>
+          <p class="description">
+            Developed a web application e-wallet that can be integrated together
+            with API to send or receive money
+          </p>
+          <a href="https://ustapay.com" class="check-project">Check</a>
+        </div>
+        <img
+          src="assets/img/project-3.png"
+          alt="project-3"
+          class="project-img"
+        />
+      </div>
+
+      <div class="project-content slider4">
+        <div class="description-container">
+          <h6 class="title">Landing Page Website</h6>
+          <p class="description">
+            Developed a landing page jewelry shop website.
+          </p>
+          <a
+            href="https://github.com/absheikh/Ecommerce-Landing-Page-Template-ReactJS"
+            class="check-project"
+            >Check</a
+          >
+        </div>
+        <img
+          src="assets/img/project-4.png"
+          alt="project-4"
+          class="project-img"
+        />
+      </div>
+
+      <div class="navigation">
+        <div class="nav-left"></div>
+        <div class="nav-right"></div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var tracker = 1;
+        var maxdivs = 4;
+        for (i = 2; i <= maxdivs; i++) {
+          $(".slider" + i).css("display", "none");
+        }
+
+        $(".nav-right").click(function () {
+          var divclass = ".slider" + tracker;
+          $(divclass).css("display", "none");
+          $(divclass).removeClass("toggle-slider");
+
+          tracker = tracker + 1;
+          if (tracker > maxdivs) tracker = 1;
+          divclass = ".slider" + tracker;
+          $(divclass).toggleClass("toggle-slider");
+        });
+
+        $(".nav-left").click(function () {
+          var divclass = ".slider" + tracker;
+          $(divclass).removeClass("toggle-slider");
+
+          tracker = tracker - 1;
+          if (tracker < 1) tracker = maxdivs;
+
+          divclass = ".slider" + tracker;
+          $(divclass).toggleClass("toggle-slider");
+        });
+        //Contact
+        $("#contact").on("click", function () {
+          var modal = $(".modal-container");
+          if (modal.hasClass("activate-modal")) {
+            $(".modal-container").removeClass("activate-modal");
+          } else {
+            $(".modal-container").toggleClass("activate-modal");
+            $(".nav-list").removeClass("activate-menu");
+            $(".toggle").removeClass("active");
+          }
+        });
+        $(".close-modal").on("click", function () {
+          var modal = $(".modal-container");
+          if (modal.hasClass("activate-modal")) {
+            $(".modal-container").removeClass("activate-modal");
+          } else {
+            $(".modal-container").toggleClass("activate-modal");
+          }
+        });
+        //Mobile Menu
+        $(".toggle").on("click", function () {
+          if ($(".nav-list").hasClass("activate-menu")) {
+            $(this).css("margin-right", "0px");
+
+            $(".nav-list").removeClass("activate-menu");
+            $(this).removeClass("active");
+          } else {
+            $(".nav-list").toggleClass("activate-menu");
+            $(this).css("margin-right", "8px");
+
+            $(this).toggleClass("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

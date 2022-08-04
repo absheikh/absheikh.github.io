@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Hi I'm Aminu Babayo Shehu. I am a full stack web developer with a passion for creating beautiful
@@ -13,8 +14,7 @@
       content="fullstack developer, frontend developer, software engineer, HTML, CSS, JavaScript, react js, react native, PHP, MySQL, MongoDB"
     />
     <meta name="author" content="Aminu Babayo Shehu" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aminu Babayo Shehu - Porfolio</title>
+    <title>Skills | Aminu Babayo Shehu - Porfolio</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,16 +27,21 @@
       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="homepage">
+  <body class="skills-page">
     <nav class="nav-container wrapper">
       <a href="#" class="nav-logo"><span>abs</span>heikh</a>
       <div class="toggle"></div>
+
       <ul class="nav-list">
-        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-        <li class="nav-item">
-          <a href="skills.html" class="nav-link">Skills</a>
-        </li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Skills</a></li>
         <li class="nav-item">
           <a href="about.html" class="nav-link">About</a>
         </li>
@@ -47,7 +52,7 @@
           <a href="projects.html" class="nav-link">Projects</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" id="contact">Contact</a>
+          <a href="#" id="contact" class="nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -64,40 +69,46 @@
         <p class="modal-list">Facebook/ABSheikhone</p>
       </div>
     </div>
-    <!-- Hero  -->
-    <div class="hero-container">
-      <div class="hero-content wrapper">
-        <h1 class="hero-title">
-          Hi, I'm <br />
-          <span>Aminu</span> Babayo Shehu
-        </h1>
-        <p class="hero-subtitle">
-          I am a full stack web developer with a passion for creating beautiful
-          and user-friendly websites.
-        </p>
-        <div class="hero-buttons">
-          <a
-            href="https://drive.google.com/file/d/1Zd4W1QpScDG-SF3OINoHZEf_a6a4wzAV/view?usp=sharing"
-            class="hero-button"
-            download
-          >
-            <span>Download CV</span>
-          </a>
-          <a href="#" class="hero-button">
-            <span>Hire Me</span>
-          </a>
+    <!-- Skills -->
+    <div class="skills-container wrapper">
+      <h4 class="title">Skills</h4>
+      <div class="skills-row">
+        <div class="skills-content">
+          <div>
+            <h5>Fro<span>nt en</span>d</h5>
+            <div class="skills">
+              React <i class="dot"></i> React Native <i class="dot"></i> Redux
+              <i class="dot"></i> JavaScript TypeScript
+              <i class="dot"></i> JQuery <i class="dot"></i> Axios
+              <i class="dot"></i> HTML <i class="dot"></i> CSS
+            </div>
+          </div>
+          <div>
+            <h5>Bac<span>k en</span>d</h5>
+            <div class="skills">
+              PHP <i class="dot"></i> Node.js <i class="dot"></i> Express
+              <i class="dot"></i> MySQL <i class="dot"></i> MongoDB SQLite
+              <i class="dot"></i>JSON Web Tokens <i class="dot"></i> Sessions
+              and Cookies
+            </div>
+          </div>
         </div>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/absheikhone" class="social-link">
-            <img
-              src="assets/img/linkedin.png"
-              alt="linkedin"
-              title="/absheikhone"
-            />
-          </a>
-          <a href="https://github.com/absheikh" class="social-link">
-            <img src="assets/img/github.png" alt="github" title="/absheikh" />
-          </a>
+        <div class="skills-content">
+          <div>
+            <h5>Tool<span>s & De</span>ployment</h5>
+            <div class="skills">
+              CLI <i class="dot"></i> Git <i class="dot"></i> GitHub
+              <i class="dot"></i> NPM <i class="dot"></i> Yarn
+              <i class="dot"></i> Netlify Heroku
+            </div>
+          </div>
+          <div>
+            <h5>Oth<span>er S</span>kills</h5>
+            <div class="skills">
+              Wordpress <i class="dot"></i> Excell <i class="dot"></i> Access
+              <i class="dot"></i> Powerpoint CorelDraw <i class="dot"></i> Figma
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -122,7 +133,6 @@
             $(".modal-container").toggleClass("activate-modal");
           }
         });
-
         //Mobile Menu
         $(".toggle").on("click", function () {
           if ($(".nav-list").hasClass("activate-menu")) {

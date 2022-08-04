@@ -14,7 +14,7 @@
     />
     <meta name="author" content="Aminu Babayo Shehu" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aminu Babayo Shehu - Porfolio</title>
+    <title>About | Aminu Babayo Shehu - Porfolio</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,23 +22,26 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-      crossorigin="anonymous"
-    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="homepage">
+  <body class="skills-page">
     <nav class="nav-container wrapper">
       <a href="#" class="nav-logo"><span>abs</span>heikh</a>
       <div class="toggle"></div>
+
       <ul class="nav-list">
-        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item">
           <a href="skills.html" class="nav-link">Skills</a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
+          <a href="" class="nav-link active">About</a>
         </li>
         <li class="nav-item">
           <a href="experience.html" class="nav-link">Experience</a>
@@ -47,7 +50,7 @@
           <a href="projects.html" class="nav-link">Projects</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" id="contact">Contact</a>
+          <a href="#" id="contact" class="nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -64,43 +67,45 @@
         <p class="modal-list">Facebook/ABSheikhone</p>
       </div>
     </div>
-    <!-- Hero  -->
-    <div class="hero-container">
-      <div class="hero-content wrapper">
-        <h1 class="hero-title">
-          Hi, I'm <br />
-          <span>Aminu</span> Babayo Shehu
-        </h1>
-        <p class="hero-subtitle">
-          I am a full stack web developer with a passion for creating beautiful
-          and user-friendly websites.
-        </p>
-        <div class="hero-buttons">
-          <a
-            href="https://drive.google.com/file/d/1Zd4W1QpScDG-SF3OINoHZEf_a6a4wzAV/view?usp=sharing"
-            class="hero-button"
-            download
-          >
-            <span>Download CV</span>
-          </a>
-          <a href="#" class="hero-button">
-            <span>Hire Me</span>
-          </a>
-        </div>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/absheikhone" class="social-link">
-            <img
-              src="assets/img/linkedin.png"
-              alt="linkedin"
-              title="/absheikhone"
-            />
-          </a>
-          <a href="https://github.com/absheikh" class="social-link">
-            <img src="assets/img/github.png" alt="github" title="/absheikh" />
-          </a>
+    <!-- About -->
+    <div class="about-container wrapper">
+      <div class="about-content">
+        <img src="assets/img/passport.png" alt="about" class="about-image" />
+        <div class="about-text">
+          <h4 class="title">About</h4>
+          <p class="about-description">
+            I'm Aminu Babayo Shehu an undergraduate student of B. Tech. Computer
+            Science. I'm a full Stack Developer with 6+ years of hands-on
+            experience designing, developing, and implementing applications and
+            solutions using a range of technologies and programming languages.
+            Seeking to leverage broad development experience and hands-on
+            technical expertise in a challenging role as a Full-stack Developer.
+            I'm currently a Frontend Developer at IT Central Kaduna.
+          </p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/absheikhone/" class="link">
+              <img
+                src="assets/img/linkedin.png"
+                alt="linkedin"
+                class="link-icon"
+              />/absheikhone
+            </a>
+            <a href="https://github.com/absheikh" class="link">
+              <img
+                src="assets/img/github.png"
+                alt="github"
+                class="link-icon"
+              />/absheikh
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
     <script>
       $(document).ready(function () {
         //Contact
@@ -122,7 +127,6 @@
             $(".modal-container").toggleClass("activate-modal");
           }
         });
-
         //Mobile Menu
         $(".toggle").on("click", function () {
           if ($(".nav-list").hasClass("activate-menu")) {
